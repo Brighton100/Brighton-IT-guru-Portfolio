@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brighton Mark Ochieng - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        function showOnlySection(sectionId) {
+            let sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.add('hidden'));
+            let activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.remove('hidden');
+                activeSection.classList.add('fade-in');
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #004d00;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: url("Images/ochi.png") no-repeat center center/cover;
+            padding: 60px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid white;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 15px;
+            background: #003300;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #66ff66;
+        }
+        .hidden { display: none; }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+        }
+        .project, .skill {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .project:hover, .skill:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .about {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .social-icons a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .email-link {
+            display: block;
+            margin-top: 12px;
+            font-size: 20px;
+            color: #99ff99;
+            text-decoration: none;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #002200;
+            padding: 15px;
+            margin-top: 20px;
+        }
+h1 {
+    font-size: 60px; /* Make it bigger */
+    color: gold; /* Gold color */
+    text-shadow: 2px 2px 5px black; /* Add some contrast */
+    font-weight: bold;
+    animation: blink 1s infinite alternate; /* Apply blinking effect */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+    @keyframes rainbow {
+        100% { color: red; }
+        14% { color: orange; }
+        28% { color: yellow; }
+        42% { color: green; }
+        57% { color: blue; }
+        71% { color: indigo; }
+        85% { color: violet; }
+        100% { color: red; }
+    }
+
+    .rainbow-text {
+        font-size: 24px;
+        font-weight: bold;
+        animation: rainbow 5s infinite linear;
+    }
+    </style> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+     <img src="Images/boo.jpg" alt="BRIGHTON MARK OCHIENG OKELLO" class="profile-img">
+        <h1>BRIGHTON MARK OCHIENG OKELLO</h1>
+        
+   <marquee><p class="rainbow-text">Business IT Graduate | Web Developer | Tech Enthusiast | Software Developer | Business Analyst | IT Consutant etc................ </p></marquee>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showOnlySection('about')">About Me</a></li>
+            <li><a href="#" onclick="showOnlySection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showOnlySection('skills')">Skills</a></li>
+            <li><a href="#" onclick="showOnlySection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="about" class="hidden about">
+            <h2>About Me</h2>
+            <p>I am Brighton Mark Ochieng, a highly skilled Business IT graduate from Mount Kenya University, with a Diploma in Cyber Security from Oxford Home Study Centre. With extensive theoretical knowledge and hands-on experience, I specialize in web development, IT infrastructure, and cybersecurity, ensuring the creation of secure, efficient, and scalable digital solutions.  
+
+My technical expertise includes HTML, CSS, JavaScript, database management, along with proficiency in other programming languages that enhance my ability to develop robust applications. Throughout my career, I have gained valuable industry experience, having worked with KCAA Headquarters (JKIA, Nairobi) as an IT Technician and Web Developer, where I contributed to maintaining IT systems and developing web-based solutions**. Additionally, my tenure at Transwide Pharmaceuticals Ltd strengthened my ability to manage IT operations, troubleshoot complex systems, and implement effective digital strategies.  
+
+Passionate about technology, problem-solving, and innovation, I am committed to continuous learning and staying updated with emerging technologies. I thrive in collaborative and fast-paced environments, leveraging my expertise to develop cutting-edge solutions that drive business success.  
+
+I look forward to applying my skills and experience to projects that create a meaningful impact in the digital space.</p>
+  </section>
+        
+</section>
+        
+<section id="projects" class="hidden">
+    <h2>Projects</h2>
+    
+    <div class="project">
+        <h3>Project 1: KCAA eServices Portal</h3>
+        <p>
+            The <strong>KCAA eServices Portal</strong> is an online platform developed to streamline aviation-related services, including license applications, approvals, renewals, and compliance tracking for aviation professionals and organizations in Kenya.
+        </p>
+        <p><strong>My Contribution:</strong></p>
+        <ul>
+            <li>Developed & optimized the eServices platform for smooth user experience.</li>
+            <li>Enhanced security measures to protect sensitive aviation data.</li>
+            <li>Managed the database for storing and retrieving licensing & regulatory information.</li>
+            <li>Fixed bugs & improved performance for better efficiency.</li>
+            <li>Collaborated with teams to implement new features for user convenience.</li>
+        </ul>
+        <p><strong>Impact:</strong></p>
+        <ul>
+            <li>Reduced paperwork & processing time for aviation professionals.</li>
+            <li>Improved efficiency & accessibility of aviation services in Kenya.</li>
+            <li>Enhanced data security & compliance with industry regulations.</li>
+        </ul>
+        <p>🔗 <a href="https://eservices.kcaa.or.ke/" target="_blank">Visit KCAA eServices Portal</a></p>
+    </div>
+
+    <div class="project">
+        <h3>Project 2: Python Calculator Assignment</h3>
+        <p>
+            This was my <strong>first Python assignment</strong> given by my <strong>PLP Academy tutor</strong>. The task was to design a **simple calculator** using Python that could perform basic arithmetic operations.
+        </p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Addition, Subtraction, Multiplication, and Division functions.</li>
+            <li>User-friendly input and output for calculations.</li>
+            <li>Handles errors such as division by zero.</li>
+            <li>Provides a clean and structured code implementation.</li>
+        </ul>
+        <p>🔗 <a href="https://github.com/Brighton100/python-week-1-assignment.git" target="_blank">View Python Calculator Code</a></p>
+    </div>
+
+    <div class="project">Project 3 - <a href="#">Coming Soon in a big way and it is a commercial website that will change life of entire world!!	</a></div>
+</section>
+
+
+        <section id="skills" class="hidden">
+            <h2>Skills</h2>
+            <div class="skill">HTML, CSS, JavaScrip among other languages </div>
+            <div class="skill">Database Management</div>
+            <div class="skill">Networking & Cybersecurity</div>
+            <div class="skill">Software Development</div>
+            <div class="skill">Project Management etc</div>
+    </section>
+
+<section id="contact" class="hidden">
+    <h2>Contact</h2>
+    <p>
+        <i class="fa-solid fa-phone"></i> 
+        <a href="tel:0706238175" style="color: #66ff66; font-weight: bold; text-decoration: none;">
+            0706238175
+        </a>
+    </p>
+    
+    <a href="mailto:ochiengbrighton109@gmail.com" class="email-link">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.twitter.com/" target="_blank">
+            <i class="fa-brands fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.github.com/" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank">
+            <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://wa.me/254706238175" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Get in Touch Form -->
+    <div id="get-in-touch">
+    <h3>Get in Touch</h3>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Message Status -->
+    <div id="message-status"></div>
+</div>
+</section>
+ <footer>
+        <p>&copy; 2025 Brighton Mark Ochieng. All Rights Reserved.</p>
+    </footer>
+</body></html>
